@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.rectangulo{
+    padding: 2% 0;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    background-repeat: repeat;
+    background-size: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.rectangulo h1{
+    width: 90%;
+    color: black;
+    font-weight: bold;
+    margin: 0 auto 2% auto;
+}
+.rectangulo p{
+    width: 90%;
+    color: black;
+    font-size: 21px;
+    margin: 0 auto;
+}
+.rectangulo h2{
+    width: 90%;
+    color: black;
+    margin: 2% auto;
+}
+.doble{
+    display: flex;
+}
+.ladoBlanco{
+    display: flex;
+    padding: 2% 0;
+    height: 400px;
+    text-align: center;
+    flex: 0.95;
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+    background-repeat: repeat;
+    background-size: 50%;
+    background-position: center;
+} 
+.ladoNegro{
+    display: flex;
+    padding: 2% 0;
+    height: 400px;
+    text-align: center;
+    flex: 1.05;
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+}
+.ladoNegro h1{
+    width: 90%;
+    color: gold;
+    font-weight: bold;
+    margin: 0 auto 2% auto;
+}
+.ladoNegro p{
+    width: 90%;
+    color: white;
+    font-size: 21px;
+    margin: 0 auto;
+}
+  .gold-div {
+    display: flex;
+    height: 10px;
+    width: 100%;
+    background-color: #eeb810;
+}
+.degradado{
+    background: rgba(255, 255, 255, 0) linear-gradient(to left, rgba(0, 0, 0, 0) 25%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .5) 75%, rgba(255, 255, 255, 1) 100%) repeat scroll 0 0;
+    position: relative;
+    margin-top: -38px;
+    height: 475px;
+    width: 400px;
+}
+.degradado2{
+    background: rgba(255, 255, 255, 0) linear-gradient(to right, rgba(0, 0, 0, 0) 25%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .5) 75%, rgba(255, 255, 255, 1) 100%) repeat scroll 0 0;
+    position: relative;
+    margin-top: -38px;
+    height: 475px;
+    width: 400px;
+}
+.fotos{
+    display: flex;
+}
+.foto-grande{
+    border-radius: 20px;
+    overflow: hidden;
+    flex: 1;
+}
+.foto-chiqui{
+    display: flex;
+    flex: 1.2;
+}
+.foto-boton{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.boton{
+    background-color: #eeb810;
+    flex: 0.8;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
