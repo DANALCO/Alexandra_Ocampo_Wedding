@@ -40,7 +40,7 @@ const dragStart = (e) => {
 }
 
 const dragging = (e) => {
-    if(!isDragging) return; // if isDragging is false return from here
+    if (!isDragging) return; // if isDragging is false return from here
     // Updates the scroll position of the carousel based on the cursor movement
     carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
 }
@@ -52,13 +52,13 @@ const dragStop = () => {
 
 const infiniteScroll = () => {
     // If the carousel is at the beginning, scroll to the end
-    if(carousel.scrollLeft === 0) {
+    if (carousel.scrollLeft === 0) {
         carousel.classList.add("no-transition");
         carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
         carousel.classList.remove("no-transition");
     }
     // If the carousel is at the end, scroll to the beginning
-    else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+    else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
         carousel.classList.add("no-transition");
         carousel.scrollLeft = carousel.offsetWidth;
         carousel.classList.remove("no-transition");
@@ -66,11 +66,11 @@ const infiniteScroll = () => {
 
     // Clear existing timeout & start autoplay if mouse is not hovering over carousel
     clearTimeout(timeoutId);
-    if(!wrapper.matches(":hover")) autoPlay();
+    if (!wrapper.matches(":hover")) autoPlay();
 }
 
 const autoPlay = () => {
-    if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+    if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
     // Autoplay the carousel after every 2500 ms
     timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
 }
@@ -86,18 +86,59 @@ wrapper.addEventListener("mouseleave", autoPlay);
 const inputs = document.querySelectorAll(".input");
 
 function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
+    let parent = this.parentNode;
+    parent.classList.add("focus");
 }
 
 function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
+    let parent = this.parentNode;
+    if (this.value == "") {
+        parent.classList.remove("focus");
+    }
 }
 
 inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
+    input.addEventListener("focus", focusFunc);
+    input.addEventListener("blur", blurFunc);
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const oscuridad = document.getElementById("oscuridad");
+    const cerrar = document.getElementById('cerrar-menu')
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+    function cerrarMenu() {
+        // Remover la clase 'active' del hamburger-menu
+        hamburgerMenu.classList.remove('active');
+        // Ocultar el #oscuridad
+        oscuridad.style.display = 'none';
+    }
+
+    if (hamburgerMenu) {
+        hamburgerMenu.addEventListener('click', function () {
+            this.classList.toggle('active');
+
+            // Verificar si la clase 'active' está presente y ajustar el estilo del #oscuridad
+            if (this.classList.contains('active')) {
+                oscuridad.style.display = 'flex';
+            } else {
+                oscuridad.style.display = 'none';
+            }
+        });
+    }
+
+    if (cerrar) {
+        cerrar.addEventListener('click', cerrarMenu);
+    }
+
+    if (oscuridad) {
+        oscuridad.addEventListener('click', cerrarMenu);
+    }
+
+    // Agregar un evento de cambio en el tamaño de la ventana
+    window.addEventListener('resize', function () {
+        // Verificar si la resolución es mayor a 1000px
+        if (window.innerWidth > 1050) {
+            cerrarMenu();
+        }
+    });
 });

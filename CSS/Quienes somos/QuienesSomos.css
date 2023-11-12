@@ -5,6 +5,7 @@ body {
     overflow-x: hidden;
 }
 
+/*barra de nav*/
 header {
     display: flex;
     position: fixed;
@@ -20,8 +21,8 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
-    height: 50px;
-    padding: 0px 20px;
+    height: 55px;
+    padding: 0 10px;
 }
 
 #menu {
@@ -46,6 +47,7 @@ header {
     position: relative;
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 .seccion::after {
@@ -72,10 +74,10 @@ header {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
     margin-top: 0.39px;
     background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 999;
 }
 
 .subseccion a {
@@ -103,6 +105,16 @@ header {
     transform: rotate(180deg);
 }
 
+#cerrar-menu {
+    display: none;
+    position: absolute;
+    bottom: 0%;
+}
+
+#cerrar-menu a {
+    color: red;
+}
+
 #logo {
     display: flex;
     align-items: center;
@@ -110,464 +122,251 @@ header {
 }
 
 #logo p {
-    margin-right: 20px;
+    margin-right: 10px;
     font-weight: bold;
+    text-align: center;
 }
 
 .Icono {
     width: 35px;
 }
 
-.gold-div {
+#gold-div {
     display: flex;
     height: 10px;
     width: 100%;
     background-color: #eeb810;
 }
 
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/*menu de hamburguesas */
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+}
+
+#mentext {
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    display: none;
+    align-items: center;
+    padding: 10px 40px;
+    margin: 5px;
+    height: 60px;
+    font-size: 30px;
+    border-bottom: #eeb810 solid 5px;
+}
+
+#oscuridad {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 990;
+}
 main {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
 }
 
-h1{
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #000;
-}
-p{
-    font-size: 1.22rem;
-}
 /*rectangulo*/
-.rectangulo{
+.rectangulo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 10px 150px;
 }
-.rectangulo h1, .rectangulo h2, .rectangulo p{
+
+.rectangulo h1,
+.rectangulo h2,
+.rectangulo p {
     text-align: center;
 }
-/*boton mas*/
-.boton_mas {
-    padding-top: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 18%;
-}
 
-.boton_mas_text {
-    padding: 10px;
-    background-color: transparent;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border: 5px solid #efb810;
-    border-radius: 100px;
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-.boton_mas2 {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    padding: 10px 0;
-    margin-bottom: 20px;
-}
-.text-aqui{
-    height: 82%;
-    width: 100%;
-}
-.boton_mas_text:hover {
-    transform: scale(1.1);
-}
+        /*footer*/
+        footer {
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            width: 100%;
+            z-index: 100;
+        }
 
-/*secciones duales*/
-.sobre_empresa {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: #ffffff;
-    min-height: 450px;
-}
+        .footer-bar {
+            display: flex;
+            justify-content: center;
+            background-color: #efb810;
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+        }
 
-.sobre_texto {
-    display: flex;
-    flex-direction: column;
-    width: 58%;
-    padding: 10px 50px;
-    box-sizing: border-box;
-}
+        .Titulo_Footer {
+            font-weight: bold;
+            font-size: 25px;
+            color: #ffffff;
+        }
 
-.sobre_imagenes {
-    display: flex;
-    width: 42%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.sobre_texto2 {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    padding: 10px 50px;
-    box-sizing: border-box;
-}
-.sobre_imagenes2 {
-    display: flex;
-    width: 30%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-/*lo de las fotos*/
-.seccion_01 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    margin: 10px;
-    box-sizing: border-box;
-}
-.seccion_02 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    margin: 10px;
-    box-sizing: border-box;
-}
-.seccion_03 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 10px;
-    box-sizing: border-box;
-}
-/*bodas*/
-.bodas_01 {
-    display: flex;
-    background-image: url(../../IMG/imagen_promocional_03.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    transition: background-size 0.3s, background-position 0.3s;
-}
+        .Lista_Footer {
+            padding: 0px 15px;
+            margin: 0px;
+            font-size: 20px;
+        }
 
-.bodas_01:hover {
-    background-size: 110%;
-    background-position: right;
-}
+        .Lista_Footer li {
+            margin-bottom: 10px;
+        }
 
-.bodas_02 {
-    display: flex;
-    background-image: url(../../IMG/imagen_promocional_01.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    width: 85%;
-    height: 100%;
-    margin-bottom: 20px;
-    transition: background-size 0.3s, background-position 0.3s;
-}
+        .Lista_Footer li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
 
-.bodas_02:hover {
-    background-size: 110%;
-    background-position: right;
-}
+        .Lista_Footer li a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+            transition: 0.3s;
+        }
 
-.bodas_03 {
-    display: flex;
-    background-image: url(../../IMG/imagen_promocional_02.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    transition: background-size 0.3s, background-position 0.3s;
-}
+        .Que_Realizamos {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            color: #ffffff;
+            padding: 20px;
+            margin: 0px;
+        }
 
-.bodas_03:hover {
-    background-size: 110%;
-    background-position: right;
-}
-/*Quince años*/
-.quince_02 {
-    display: flex;
-    background-image: url(../../IMG/imagen_promocional_01.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    width: 80%;
-    height: 100%;
-    margin-bottom: 20px;
-    transition: background-size 0.3s, background-position 0.3s;
-}
+        .Siguenos_Redes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+            color: #ffffff;
+            padding: 20px;
+            margin: 0px;
+        }
 
-.quince_02:hover {
-    background-size: 110%;
-    background-position: right;
-}
+        .Redes {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+            margin: 0px;
+        }
 
-.quince_03 {
-    display: flex;
-    background-image: url(../../IMG/imagen_promocional_02.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    transition: background-size 0.3s, background-position 0.3s;
-}
+        .Boton_Red {
+            display: flex;
+            border: 4px solid #ffffff;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            width: 60px;
+            height: 60px;
+            transition: 0.3s;
+            background-color: transparent;
+            margin: 15px;
+        }
 
-.quince_03:hover {
-    background-size: 110%;
-    background-position: right;
-}
-/*infantiles*/
-.infa_02 {
-    display: flex;
-    background-image: url(../../IMG/imagen_promocional_01.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    width: 80%;
-    height: 100%;
-    margin-bottom: 20px;
-    transition: background-size 0.3s, background-position 0.3s;
-}
+        .Boton_Red:hover {
+            transform: scale(1.1);
+        }
 
-.infa_02:hover {
-    background-size: 110%;
-    background-position: right;
-}
-
-.infa_03 {
-    display: flex;
-    background-image: url(../../IMG/imagen_promocional_02.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    transition: background-size 0.3s, background-position 0.3s;
-}
-
-.infa_03:hover {
-    background-size: 110%;
-    background-position: right;
-}
-/*footer*/
-footer {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    width: 100%;
-    z-index: 100;
-}
-
-.footer-bar {
-    display: flex;
-    justify-content: center;
-    background-color: #efb810;
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-}
-
-.Titulo_Footer {
-    font-weight: bold;
-    font-size: 25px;
-    color: #ffffff;
-}
-
-.Lista_Footer {
-    padding: 0px 15px;
-    margin: 0px;
-    font-size: 20px;
-}
-
-.Lista_Footer li {
-    margin-bottom: 10px;
-}
-
-.Lista_Footer li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.Lista_Footer li a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-    transition: 0.3s;
-}
-
-.Que_Realizamos {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    color: #ffffff;
-    padding: 20px;
-    margin: 0px;
-}
-
-.Siguenos_Redes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 40%;
-    color: #ffffff;
-    padding: 20px;
-    margin: 0px;
-}
-
-.Redes {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-    margin: 0px;
-}
-
-.Boton_Red {
-    display: flex;
-    border: 4px solid #ffffff;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    width: 60px;
-    height: 60px;
-    transition: 0.3s;
-    background-color: transparent;
-    margin: 15px;
-}
-
-.Boton_Red:hover {
-    transform: scale(1.1);
-}
-
-.Quires_Contactarnos {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    color: #ffffff;
-    padding: 20px;
-    margin: 0px;
-}
+        .Quires_Contactarnos {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            color: #ffffff;
+            padding: 20px;
+            margin: 0px;
+        }
 /*responsivo*/
-@media screen and (max-width: 1400px) {
-    .sobre_imagenes{
-        width: 50%;
-    }
-    .sobre_texto{
-        width: 50%;
-    }
-}
-@media screen and (max-width: 1200px) {
-    .sobre_imagenes{
-        width: 55%;
-    }
-    .sobre_texto{
-        width: 45%;
-    }
-    .sobre_texto2 {
+@media screen and (max-width: 1050px) {
+    #mentext {
         display: flex;
-        flex-direction: column;
-        width: 65%;
-        padding: 10px 50px;
-        box-sizing: border-box;
     }
-    .sobre_imagenes2 {
+
+    #cerrar-menu {
         display: flex;
-        width: 35%;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .sobre_imagenes{
-        width: 65%;
-    }
-    .sobre_texto{
-        width: 35%;
-    }
-    .sobre_texto2 {
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-        padding: 10px 50px;
-        box-sizing: border-box;
-    }
-    .sobre_imagenes2 {
-        display: flex;
-        width: 40%;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-}
-@media screen and (max-width: 800px) {
-    .sobre_imagenes{
-        width: 80%;
-        padding: 0;
         margin: 0;
     }
-    .sobre_texto{
-        width: 80%;
-        padding: 0;
-        margin: 0;
+
+    .hamburger-menu {
+        display: block;
     }
-    .sobre_empresa{
+
+    #menu {
+        display: none;
+        box-sizing: border-box;
+        background-color: white;
         flex-direction: column;
+        position: fixed;
+        padding: 0 20px;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: auto;
+        box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+        animation: slideIn 0.5s forwards;
+        z-index: 995;
+    }
+
+    .seccion {
+        box-sizing: border-box;
+        margin: 5px;
+        padding: 10px 40px;
+        position: relative;
+        display: flex;
+        height: 50px;
+        width: 100%;
+        text-align: center;
         align-items: center;
+        justify-content: center;
     }
-    .boton_mas{
+
+    .seccion::after {
+        background-color: transparent;
+    }
+
+    .hamburger-menu.active+#menu {
+        display: flex;
+    }
+
+    .hamburger-menu.active {
         display: none;
     }
-    .boton_mas2{
-        display: flex;
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
     }
-    #dos{
-        flex-direction: column-reverse;
-    }
-    .bodas_01{
-        height: 55vw;
-    }
-    .sobre_texto2 {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    .sobre_imagenes2 {
-        display: flex;
-        width: 80%;
-        height: 60vw;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    .footer-bar{
+}
+
+@media screen and (max-width: 800px) {
+    .footer-bar {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
+
     .Que_Realizamos {
         width: 100%;
         height: auto;
@@ -575,20 +374,24 @@ footer {
         justify-content: center;
         padding: 20px 0;
     }
-    
+
     .Siguenos_Redes {
         width: 100%;
         height: auto;
         padding: 20px 0;
     }
-    .Quires_Contactarnos{
+
+    .Quires_Contactarnos {
         width: 100%;
         padding: 20px 0;
         height: auto;
         align-items: center;
         justify-content: center;
     }
-    .rectangulo{
-        padding: 20px 50px;
+}
+
+@media screen and (max-width: 450px) {
+    #logo p {
+        display: none;
     }
 }
