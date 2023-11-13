@@ -295,17 +295,9 @@ main {
 /*quienes somos*/
 .sobre_empresa {
     display: flex;
-    justify-content: center;
     width: 100%;
     background-color: #ffffff;
     padding-bottom: 5px;
-}
-
-.sobre_texto {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding: 10px 50px;
 }
 
 .sobre_nosotros {
@@ -323,17 +315,24 @@ main {
     margin: 0px;
 }
 
-.sobre_imagenes {
+.sobre_texto {
     display: flex;
-    width: 50%;
-    padding: 10px;
+    flex-direction: column;
+    width: 40%;
+    padding: 10px 50px;
+}
+
+.sobre_imagenes {
+    justify-content: left;
+    display: flex;
+    width: 60%;
 }
 
 .seccion_01 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: auto;
     margin: 10px;
 }
 
@@ -341,23 +340,23 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60%;
+    width: auto;
     margin: 10px;
 }
 
 .prom_01 {
     display: flex;
     background-image: url(../../IMG/imagen_promocional_03.jpg);
-    background-size: 300px;
+    background-size: 290px;
     background-position: 0px;
     border-radius: 10px;
-    width: 300px;
-    height: 450px;
+    width: 230px;
+    height: 410px;
     transition: background-size 0.3s, background-position 0.3s;
 }
 
 .prom_01:hover {
-    background-size: 310px;
+    background-size: 300px;
     background-position: -10px;
 }
 
@@ -368,7 +367,7 @@ main {
     background-position: 0px;
     border-radius: 10px;
     width: 350px;
-    height: 200px;
+    height: 180px;
     margin-bottom: 20px;
     transition: background-size 0.3s, background-position 0.3s;
 }
@@ -385,7 +384,7 @@ main {
     background-position: 0px;
     border-radius: 10px;
     width: 400px;
-    height: 230px;
+    height: 210px;
     transition: background-size 0.3s, background-position 0.3s;
 }
 
@@ -953,6 +952,19 @@ footer {
 }
 
 /*responsivo*/
+@media screen and (max-width: 1120px) {
+    .prom_03 {
+        display: none;
+    }
+
+    .sobre_imagenes {
+        padding-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width: 1050px) {
     #mentext {
         display: flex;
@@ -981,6 +993,12 @@ footer {
         box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
         animation: slideIn 0.5s forwards;
         z-index: 995;
+    }
+    .sobre_imagenes {
+        width: 50%;
+    }
+    .sobre_texto{
+        width: 50%;
     }
 
     .seccion {
@@ -1057,6 +1075,24 @@ footer {
         flex-direction: column;
     }
 
+    .sobre_imagenes {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .seccion_02 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .prom_03{
+        display: flex;
+    }
+
+    .seccion_01 {
+        display: none;
+    }
+
     .sobre_texto,
     .sobre_imagenes {
         width: 100%;
@@ -1095,6 +1131,7 @@ footer {
     .wrapper .carousel {
         grid-auto-columns: 100%;
     }
+
     .logo_imagen {
         width: 400px;
     }
@@ -1143,9 +1180,36 @@ footer {
     #logo p {
         display: none;
     }
-}
-@media screen and (max-width: 450px) {
-    .logo_imagen{
+    .prom_02 {
+        display: flex;
+        background-image: url(../../IMG/imagen_promocional_01.jpg);
+        background-size: 300px;
+        background-position: 0px;
+        border-radius: 10px;
         width: 300px;
+        height: 130px;
+        margin-bottom: 20px;
+        transition: background-size 0.3s, background-position 0.3s;
+    }
+    
+    .prom_02:hover {
+        background-size: 310px;
+        background-position: -10px;
+    }
+    
+    .prom_03 {
+        display: flex;
+        background-image: url(../../IMG/imagen_promocional_02.jpg);
+        background-size: 350px;
+        background-position: 0px;
+        border-radius: 10px;
+        width: 350px;
+        height: 160px;
+        transition: background-size 0.3s, background-position 0.3s;
+    }
+    
+    .prom_03:hover {
+        background-size: 360px;
+        background-position: -10px;
     }
 }
