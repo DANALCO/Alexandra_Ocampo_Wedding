@@ -548,3 +548,16 @@ main {
         grid-column-start: span 1;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .Contenedor_servicio {
+        flex-direction: column;
+    }
+    .Servicio_division_01 {
+        width: 95%;
+    }
+    .Servicio_division_02 {
+        width: 95%;
+        justify-content: center;
+    }
+}

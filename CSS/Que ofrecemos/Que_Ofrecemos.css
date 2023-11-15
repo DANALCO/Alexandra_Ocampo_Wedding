@@ -1,9 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Varela Round';
     overflow-x: hidden;
-    box-sizing: border-box;
 }
 
 /*barra de nav*/
@@ -603,6 +606,7 @@ main {
 
 .servicio_titulo {
     display: flex;
+    text-align: center;
     color: #000000;
     font-weight: bold;
     font-size: 30px;
@@ -640,6 +644,7 @@ main {
     width: 60%;
     padding: 0px;
     margin: 0px;
+    margin-bottom: 20px;
 }
 
 .Titulo_servicio {
@@ -759,4 +764,33 @@ main {
 
 .Alquiler_mobiliario .prom_05 {
     background-image: url(../../IMG/mobiliario_02.jpg);
+}
+
+@media screen and (max-width: 1100px) {
+    .Contenedor_servicio {
+        flex-direction: column;
+    }
+    .Servicio_division_01 {
+        width: 95%;
+    }
+    .Servicio_division_02 {
+        width: 95%;
+        justify-content: center;
+    }
+    .Titulo_servicio {
+        text-align: center;
+    }
+    .Servicio_boton {
+        justify-content: center;
+        align-items: center;
+    }
+    .Eventos_empresariales .Contenedor_servicio .Servicio_division_02 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Grupo_Imagenes_02 {
+        display: none;
+    }
 }
